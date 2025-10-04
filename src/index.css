@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    letter-spacing: 0.5px;
+  }
+}
+
+
+@keyframes smooth-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.smooth-up-down {
+  animation: smooth-up-down 5s ease-in-out infinite;
+}
+
+
+
+@keyframes smooth-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+.smooth-scale {
+  animation: smooth-scale 4s ease-in-out infinite;
+}
+
+
+/* Infinite rotation animation */
+@keyframes spinInfinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Apply this class to any element */
+.rotate-infinite {
+  animation: spinInfinite 6s linear infinite;
+}
