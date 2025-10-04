@@ -6,7 +6,7 @@ import image5 from "../assets/iPad_Air__2022_-removebg-preview-removebg-preview-
 import Button from "./ui/Button";
 import { motion } from "framer-motion";
 
-const containerVariants = {
+const containerVariants :any = {
   hidden: { opacity: 0 },
   visible: { 
     opacity: 1, 
@@ -14,7 +14,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants :any= {
   hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
@@ -23,7 +23,7 @@ const itemVariants = {
   },
 };
 
-const imageVariants = {
+const imageVariants :any = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { 
     opacity: 1, 
