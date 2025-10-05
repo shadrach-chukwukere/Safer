@@ -119,7 +119,7 @@ export default function Hero() {
                   loading="eager"
                   src={image3}
                   alt="Bottom Left"
-                  className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                  className="w-[154px] min-w-[120px] min-h-[154px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
                 />
               </div>
             </motion.div>
@@ -135,7 +135,7 @@ export default function Hero() {
                   loading="eager"
                   src={image1}
                   alt="Bottom Right"
-                  className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                  className="w-[154px] min-w-[120px] min-h-[154px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
                 />
               </div>
             </motion.div>
