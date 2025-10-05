@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <PageMeta
-        title="SmartSafer"
+        title="Safer"
         description="Experience secure, fast, and smart money transactions with SmartSafer. Simplify your financial life with seamless payments and trusted protection."
         keywords="SmartSafer, home, secure transactions, money transfer, payment app, digital wallet"
       />
