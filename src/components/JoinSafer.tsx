@@ -50,7 +50,7 @@ export default function JoinSafer() {
             <LazyLoadImage
               src={image5}
               alt="iPad Air Preview"
-              className="object-contain w-[250px] sm:w-auto max-w-sm"
+              className="object-contain w-[250px] sm:w-auto max-w-sm h-full"
               effect="blur"
             />
           </motion.div>
