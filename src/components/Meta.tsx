@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import image1 from "../../public/vite.png"
+
 interface PageMetaProps {
   title: string;
   description: string;
@@ -17,12 +17,11 @@ export default function PageMeta({
 }: PageMetaProps) {
   return (
     <Helmet>
-      {/* Basic Meta */}
       <meta charSet="UTF-8" />
-      <link rel="icon" type="image/svg+xml" href={image1} />
+      <link rel="icon" type="image/png" href={image} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name={keywords} content="width=device-width, initial-scale=1.0" />
-      <title>Safer</title>
+      <meta name="keywords" content={keywords} />
+      <title>{title}</title>
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
