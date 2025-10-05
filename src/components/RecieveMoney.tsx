@@ -78,7 +78,7 @@ export default function ReceiveMoney() {
           </motion.p>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center lg:items-end gap-6">
+        <div className="flex flex-col lg:flex-row justify-center lg:items-end gap-6 md:px-2">
           {/* Left Logos (Desktop) */}
           <motion.div
             className="hidden lg:flex flex-row gap-5 pb-12"

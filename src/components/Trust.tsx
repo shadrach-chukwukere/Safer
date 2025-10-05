@@ -36,7 +36,7 @@ export default function Trust() {
                   {card?.title}
                 </div>
                 <div className="w-full flex justify-between items-end">
-                  <div className="text-[40px] md:px-6 px-3 text-white/25 font-semibold">
+                  <div className="text-[40px] md:px-6 px-3 text-white/20 font-semibold">
                     -{index + 1}
                   </div>
                   <img
