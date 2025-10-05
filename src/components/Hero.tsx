@@ -50,7 +50,7 @@ export default function Hero() {
           variants={textContainerVariants}
         >
           <motion.h1
-            className="font-extrabold leading-[1.1]"
+            className="font-extrabold leading-[1.1] text-center"
             variants={textItemVariants}
           >
             <span className="block text-[42px] sm:text-[50px] lg:text-[75px]">
@@ -62,7 +62,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-md md:text-lg font-semibold max-w-lg mx-auto md:mx-0"
+            className="text-sm sm:text-md md:text-lg font-semibold max-w-lg mx-auto md:mx-0 text-center"
             variants={textItemVariants}
           >
             Receive, send, convert, send funds locally, create and make
@@ -70,7 +70,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="pt-6 flex justify-center md:justify-start"
+            className="pt-6 flex justify-center lg:justify-start"
             variants={textItemVariants}
           >
             <GetSaferBtn />
@@ -87,9 +87,10 @@ export default function Hero() {
           >
             <div className="rounded-full md:rounded-[40px] overflow-hidden bg-black relative">
               <img
+                loading="eager"
                 src={image2}
                 alt="Top"
-                className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                className="w-[154px] min-w-[120px] min-h-[154px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
               />
             </div>
           </motion.div>
@@ -115,6 +116,7 @@ export default function Hero() {
             >
               <div className="rounded-full md:rounded-[40px] overflow-hidden bg-black">
                 <img
+                  loading="eager"
                   src={image3}
                   alt="Bottom Left"
                   className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
@@ -130,6 +132,7 @@ export default function Hero() {
             >
               <div className="rounded-full md:rounded-[40px] overflow-hidden bg-black">
                 <img
+                  loading="eager"
                   src={image1}
                   alt="Bottom Right"
                   className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"

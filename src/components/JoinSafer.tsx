@@ -2,41 +2,37 @@ import image1 from "../assets/image 755.png";
 import image2 from "../assets/image_592-removebg-preview.png";
 import image3 from "../assets/image 593.png";
 import image4 from "../assets/Vector.png";
-import image5 from "../assets/iPad_Air__2022_-removebg-preview-removebg-preview-removebg-preview.png";
+import image5 from "../assets/94555838545.png";
 import Button from "./ui/Button";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
-const containerVariants: any = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 };
 
-const itemVariants: any = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 20 },
+    transition: { type: "spring" as const, stiffness: 100, damping: 20 },
   },
 };
 
-const imageVariants: any = {
+const imageVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: "spring", stiffness: 50, damping: 10 },
+    transition: { type: "spring" as const, stiffness: 50, damping: 10 },
   },
 };
 
 export default function JoinSafer() {
   return (
-    <div className="px-4 sm:px-0 pt-8 sm:pt-12 space-y-14 mx-3 lg:mx-16 font-Inter">
+    <div className="px-4 sm:px-0 pt-8 sm:pt-12 space-y-14 mx-3 lg:mx-16 font-Righteous">
       {/* First Section */}
       <motion.div
         className="py-12"
@@ -62,7 +58,7 @@ export default function JoinSafer() {
           {/* Text Block */}
           <div className="space-y-12 text-center md:text-left flex flex-col items-center md:items-start">
             <motion.p
-              className="font-medium text-[32px] sm:text-[40px] md:text-[45px] leading-[1.1] font-Righteous"
+              className="font-medium text-[32px] sm:text-[40px] md:text-[45px] leading-[1.1]"
               variants={itemVariants}
             >
               Different smart options to start a transaction, Snap, scan, upload
@@ -122,23 +118,20 @@ export default function JoinSafer() {
             className="flex justify-center items-start mt-6 relative w-full h-full"
             variants={imageVariants}
           >
-            <LazyLoadImage
+            <img
               src={image4}
               alt="Decor left"
               className="absolute left-0 top-0 w-12 sm:w-16 smooth-up-down"
-              effect="blur"
             />
-            <LazyLoadImage
+            <img
               src={image3}
               alt="Decor right"
               className="absolute top-0 right-0 w-20 sm:w-28 rotate-infinite"
-              effect="blur"
             />
-            <LazyLoadImage
+            <img
               src={image2}
               alt="USD card preview"
               className="w-full max-w-xs sm:max-w-sm md:max-w-md object-contain"
-              effect="blur"
             />
           </motion.div>
         </motion.div>
