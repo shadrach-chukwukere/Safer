@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   body {
     letter-spacing: 0.5px;
+    overflow-x: hidden;
   }
 }
-
 
 @keyframes smooth-up-down {
   0% {
@@ -32,10 +31,9 @@
   animation: smooth-up-down 5s ease-in-out infinite;
 }
 
-
-
 @keyframes smooth-scale {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -46,7 +44,6 @@
 .smooth-scale {
   animation: smooth-scale 4s ease-in-out infinite;
 }
-
 
 /* Infinite rotation animation */
 @keyframes spinInfinite {

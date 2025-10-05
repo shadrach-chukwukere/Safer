@@ -79,7 +79,7 @@ export default function Download() {
             <img
               src={image}
               alt="iPhone 12 Product Red"
-              className="w-[350px] rounded-lg"
+              className="w-[350px] rounded-lg md:min-h-[317px] sm:min-h-[280px] min-h-[250px]"
             />
           </motion.div>
 

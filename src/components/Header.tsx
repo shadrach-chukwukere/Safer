@@ -17,7 +17,7 @@ export default function Header() {
           <Link
             to="/"
             onClick={handleLinkClick}
-            className="flex items-center gap-2"
+            className="flex items-center gap-3"
           >
             <Logo />
             Safer

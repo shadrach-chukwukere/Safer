@@ -92,7 +92,7 @@ export default function ReceiveMoney() {
           </motion.div>
 
           <motion.div
-            className="px-32 lg:px-24 lg:-mb-[150px]"
+            className="px-24 lg:px-24 lg:-mb-[150px]"
             variants={centerImageVariants}
           >
             <img

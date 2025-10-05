@@ -89,13 +89,13 @@ export default function Hero() {
               <img
                 src={image2}
                 alt="Top"
-                className="w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
               />
             </div>
           </motion.div>
 
           <motion.div
-            className="absolute sm:top-36 py-3 px-4 top-1/2 sm:translate-y-24 -translate-y-12 -translate-x-1/2 w-[205px] text-xs font-semibold bg-white text-black px-3 py-1 rounded-[20px] shadow"
+            className="absolute sm:top-36 py-3 px-4 sm:translate-y-24 -translate-y-12 top-36 -translate-x-1/2 w-[205px] text-xs font-semibold bg-white text-black px-3 py-1 rounded-[20px] shadow"
             variants={infoBoxVariants}
             initial="hidden"
             animate="visible"
@@ -117,7 +117,7 @@ export default function Hero() {
                 <img
                   src={image3}
                   alt="Bottom Left"
-                  className="w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                  className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
                 />
               </div>
             </motion.div>
@@ -132,7 +132,7 @@ export default function Hero() {
                 <img
                   src={image1}
                   alt="Bottom Right"
-                  className="w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
+                  className="w-[154px] min-w-[120px] sm:min-w-[154px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] object-cover"
                 />
               </div>
             </motion.div>

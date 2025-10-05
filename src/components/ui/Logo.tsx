@@ -7,5 +7,6 @@ export default function Logo() {
       {/* Vertical black bar perfectly centered */}
       <div className="absolute w-[7px] h-[18px] bg-black rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
     </div>
+    
   );
 }
