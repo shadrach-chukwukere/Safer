@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Title, Meta, Link } from "react-head";
 
 interface PageMetaProps {
   title: string;
@@ -12,30 +12,28 @@ export default function PageMeta({
   title,
   description,
   keywords = "",
-  image = "https://www.facebook.com/images/fb_icon_325x325.png",
+  image = "/default-og-image.png",
   url = typeof window !== "undefined" ? window.location.href : "",
 }: PageMetaProps) {
   return (
-    <Helmet>
-      <meta charSet="UTF-8" />
-      <link rel="icon" type="image/png" href={image} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="keywords" content={keywords} />
-      <title>{title}</title>
+    <>
+      <Title>{title}</Title>
+      <Meta name="description" content={description} />
+      {keywords && <Meta name="keywords" content={keywords} />}
+      <Link rel="canonical" href={url} />
 
-      {/* Open Graph */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Safer" />
+      {/* Open Graph / Facebook */}
+      <Meta property="og:type" content="website" />
+      <Meta property="og:title" content={title} />
+      <Meta property="og:description" content={description} />
+      <Meta property="og:image" content={image} />
+      <Meta property="og:url" content={url} />
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-    </Helmet>
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta name="twitter:title" content={title} />
+      <Meta name="twitter:description" content={description} />
+      <Meta name="twitter:image" content={image} />
+    </>
   );
 }
