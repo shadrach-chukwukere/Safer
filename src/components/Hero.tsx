@@ -41,7 +41,7 @@ const infoBoxVariants: Variants = {
 
 export default function Hero() {
   return (
-    <div className="bg-black text-white py-16 md:py-32 min-h-screen font-Inter">
+    <div className="bg-black text-white py-16 md:py-32 font-Inter">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center mx-10 items-center gap-12">
         <motion.div
           className="space-y-4 text-center md:text-left"

@@ -39,6 +39,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <button
+        name="toggleBtn"
           className="md:hidden p-2 rounded hover:bg-white/10 z-50"
           onClick={() => setOpen(!open)}
         >
