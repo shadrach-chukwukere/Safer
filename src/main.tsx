@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "@fontsource/righteous";
@@ -11,13 +10,11 @@ import { Toast } from "./components/Toast.tsx";
 import { HeadProvider } from "react-head";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Toast />
-      <ScrollToTop />
-      <HeadProvider>
-        <App />
-      </HeadProvider>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter>
+    <Toast />
+    <ScrollToTop />
+    <HeadProvider>
+      <App />
+    </HeadProvider>
+  </BrowserRouter>
 );
