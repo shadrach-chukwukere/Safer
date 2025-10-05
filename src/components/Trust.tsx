@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import   "swiper/css";
+import "swiper/css";
 
 import image1 from "../assets/image 602.png";
 import image2 from "../assets/image 604.png";
@@ -17,9 +17,9 @@ export default function Trust() {
       {/* Swiper for screens < 1024 */}
       <div className="block lg:hidden">
         <Swiper
-          spaceBetween={16} 
+          spaceBetween={16}
           slidesPerView={1.2} // show a bit of next slide
-          centeredSlides={false} 
+          centeredSlides={false}
           breakpoints={{
             640: { slidesPerView: 1.5, spaceBetween: 20 },
             768: { slidesPerView: 2, spaceBetween: 20 },
@@ -32,10 +32,7 @@ export default function Trust() {
               className="flex justify-start max-w-[100%]"
             >
               <div className="bg-[#080707] text-white md:py-10 py-5 sm:px-8 px-5 space-y-4 rounded-3xl h-full w-full">
-                <div
-                  className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[25px] font-semibold text-left"
-                  
-                >
+                <div className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[18px] font-semibold text-left">
                   {card?.title}
                 </div>
                 <div className="w-full flex justify-between items-end">

@@ -1,4 +1,7 @@
 import { motion, type Variants } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import image1 from "../assets/image 594 (2).png";
 import image2 from "../assets/image 581.png";
 import image3 from "../assets/image 554.png";
@@ -76,59 +79,69 @@ export default function ReceiveMoney() {
         </div>
 
         <div className="flex flex-col lg:flex-row justify-center lg:items-end gap-6">
+          {/* Left Logos (Desktop) */}
           <motion.div
             className="hidden lg:flex flex-row gap-5 pb-12"
             variants={sectionContainerVariants}
           >
             {leftLogos.map((img, i) => (
-              <motion.img
-                key={i}
-                src={img}
-                alt={`Bank ${i + 1}`}
-                className="w-[70px] object-contain rounded-[47px]"
-                variants={logoItemVariants}
-              />
+              <motion.div key={i} variants={logoItemVariants}>
+                <LazyLoadImage
+                  src={img}
+                  alt={`Bank ${i + 1}`}
+                  className="w-[70px] object-contain rounded-[47px]"
+                  effect="blur"
+                />
+              </motion.div>
             ))}
           </motion.div>
 
+          {/* Center Image */}
           <motion.div
-            className="px-24 lg:px-24 lg:-mb-[150px]"
+            className="px-16 sm:px-32 md:px-64 lg:px-32 lg:-mb-[150px] flex justify-center"
             variants={centerImageVariants}
           >
-            <img
+            <LazyLoadImage
               src={image1}
               alt="Receive Money"
-              className="lg:max-w-[350px]"
+              className="lg:max-w-[350px] w-full object-contain"
+              effect="blur"
+              visibleByDefault={window.innerWidth >= 1024} // ✅ ensures desktop image loads immediately
+              placeholderSrc={image1} // optional: avoids flicker
             />
           </motion.div>
 
+          {/* Right Logos (Desktop) */}
           <motion.div
             className="hidden lg:flex flex-row gap-5 pb-12"
             variants={sectionContainerVariants}
           >
             {rightLogos.map((img, i) => (
-              <motion.img
-                key={i}
-                src={img}
-                alt={`Bank ${i + 4}`}
-                className="w-[70px] object-contain rounded-[47px]"
-                variants={logoItemVariants}
-              />
+              <motion.div key={i} variants={logoItemVariants}>
+                <LazyLoadImage
+                  src={img}
+                  alt={`Bank ${i + 4}`}
+                  className="w-[70px] object-contain rounded-[47px]"
+                  effect="blur"
+                />
+              </motion.div>
             ))}
           </motion.div>
 
+          {/* All Logos (Mobile) */}
           <motion.div
             className="flex lg:hidden flex-wrap justify-center gap-4 mt-6"
             variants={sectionContainerVariants}
           >
             {[...leftLogos, ...rightLogos].map((img, i) => (
-              <motion.img
-                key={i}
-                src={img}
-                alt={`Bank ${i + 1}`}
-                className="w-[38px] sm:w-[60px] object-contain rounded-[47px]"
-                variants={logoItemVariants}
-              />
+              <motion.div key={i} variants={logoItemVariants}>
+                <LazyLoadImage
+                  src={img}
+                  alt={`Bank ${i + 1}`}
+                  className="w-[38px] sm:w-[60px] object-contain rounded-[47px]"
+                  effect="blur"
+                />
+              </motion.div>
             ))}
           </motion.div>
         </div>
