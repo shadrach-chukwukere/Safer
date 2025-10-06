@@ -21,7 +21,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="w-full h-[1px] bg-[repeating-linear-gradient(to_right,#BFBFBF_0_40px,transparent_40px_50px)] block sm:hidden"></div>
+              <div className="w-full h-[1px] bg-[repeating-linear-gradient(to_right,#BFBFBF_0_40px,transparent_40px_50px)] block sm:hidden opacity-40"></div>
 
               <div className="text-sm leading-relaxed container md:mx-auto">
                 Safer provides secure and seamless payment solutions, offering

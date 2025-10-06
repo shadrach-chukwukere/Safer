@@ -41,7 +41,7 @@ const infoBoxVariants: Variants = {
 
 export default function Hero() {
   return (
-    <div className="bg-black text-white py-16 md:py-32 font-Inter">
+    <div className="bg-black text-white py-16 md:py-32 font-Inter min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center mx-10 items-center gap-12">
         <motion.div
           className="space-y-4 text-center md:text-left"
@@ -96,14 +96,14 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute sm:top-36 py-3 px-4 sm:translate-y-24 -translate-y-12 top-36 -translate-x-1/2 w-[205px] text-xs font-semibold bg-white text-black px-3 py-1 rounded-[20px] shadow"
+            className="absolute sm:top-36 py-3 px-4 sm:translate-y-24 -translate-y-12 top-36 -translate-x-1/2 w-[205px] text-xs font-normal bg-white text-black px-3 py-1 rounded-[20px] shadow"
             variants={infoBoxVariants}
             initial="hidden"
             animate="visible"
           >
-            <span className="line-clamp-3 font-[inter]">
+            <span className="font-[inter]">
               Safer is changing the payment landscape with smart options for
-              payment, join safer today..
+              payment, join safer today...
             </span>
           </motion.div>
 

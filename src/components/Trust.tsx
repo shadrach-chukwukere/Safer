@@ -29,14 +29,15 @@ export default function Trust() {
           {cards.map((card, index) => (
             <SwiperSlide
               key={card.id}
-              className="flex justify-start max-w-[100%]"
+              style={{ minHeight: "100%", height: "100%" }}
+              className="flex justify-start max-w-[100%] min-h-full h-[2000px]"
             >
-              <div className="bg-[#080707] text-white md:py-10 py-5 sm:px-8 px-5 space-y-4 rounded-3xl h-full w-full">
+              <div className="bg-[#080707] text-white lg:py-10 md:py-7 py-5 sm:px-8 px-5 space-y-4 rounded-3xl min-h-full w-full h-[270px] md:min-h-full h-full">
                 <div className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[18px] font-semibold text-left">
                   {card?.title}
                 </div>
-                <div className="w-full flex justify-between items-end">
-                  <div className="text-[40px] md:px-6 px-3 text-white/20 font-semibold">
+                <div className="w-full flex justify-end items-end">
+                  <div className="text-[40px] md:px-6 px-3 left-2 text-white/20 font-semibold absolute bottom-3">
                     -{index + 1}
                   </div>
                   <img
