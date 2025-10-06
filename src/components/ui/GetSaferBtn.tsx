@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function GetSaferBtn() {
   const [, setStore] = useState<"google" | "apple">("google");
@@ -42,18 +43,33 @@ export default function GetSaferBtn() {
     },
   };
 
+  function getDeviceOS(): "Android" | "IOS" | "Other" {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    if (userAgent.includes("android")) return "Android";
+    if (/iphone|ipad|ipod/.test(userAgent)) return "IOS";
+
+    return "Other";
+  }
+
   return (
     <div className="relative w-full max-w-[250px]">
       {/* Main Button */}
-      <div
-        role="button"
-        onClick={() => setOpen(open)}
-        className="bg-white font-Inter transition duration-200 active:scale-[0.94] flex items-center justify-center gap-4 py-3 px-4 font-bold text-xl w-full max-w-[250px] text-black rounded-full cursor-pointer"
+      <Link
+        to={
+          getDeviceOS() == "Android" ? "/" : getDeviceOS() == "IOS" ? "/" : ""
+        }
       >
-        <span className="text-center">Get Safer</span>
-        <FaGooglePlay size={23} />
-        <FaApple size={27} />
-      </div>
+        <div
+          role="button"
+          onClick={() => getDeviceOS() == "Other" && setOpen(!open)}
+          className="bg-white font-Inter transition duration-200 active:scale-[0.94] flex items-center justify-center gap-4 py-3 px-4 font-bold text-xl w-full max-w-[250px] text-black rounded-full cursor-pointer"
+        >
+          <span className="text-center">Get Safer</span>
+          <FaGooglePlay size={23} />
+          <FaApple size={27} />
+        </div>
+      </Link>
 
       {/* Dropdown */}
       <AnimatePresence>
