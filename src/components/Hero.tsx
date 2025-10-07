@@ -44,26 +44,26 @@ export default function Hero() {
     <div className="bg-black text-white py-16 md:py-24 font-Inter min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center mx-10 items-start gap-6">
         <motion.div
-          className="space-y-8 text-center md:text-left"
+          className="space-y-6 text-center md:text-left"
           initial="hidden"
           animate="visible"
           variants={textContainerVariants}
         >
           <motion.div variants={textItemVariants} className="space-y-4 sm:pt-7">
             <motion.h1
-              className="font-black leading-[1.1] text-center"
+              className="super-bold leading-[1.1] text-center"
               variants={textItemVariants}
             >
-              <span className="block text-[42px] sm:text-[60px] lg:text-[80px]">
+              <span className="block text-[42px] sm:text-[60px] lg:text-[70px] xl:text-[75px]" style={{fontWeight:"2000"}}>
                 Experience Ai
               </span>
-              <span className="block text-[28px] sm:text-[40px] lg:text-[55px]">
+              <span className="block text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[55px]">
                 powered payments
               </span>
             </motion.h1>
 
             <motion.p
-              className="text-sm sm:text-md md:text-[22px] font-semibold max-w-lg mx-auto md:mx-0 text-center leading-[1.5]"
+              className="text-sm sm:text-md md:text-[22px] font-semibold max-w-lg mx-auto md:mx-0 lg:text-left text-center leading-[1.5]"
               variants={textItemVariants}
             >
               Receive, send, convert, send funds locally, create and make

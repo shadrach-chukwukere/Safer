@@ -59,3 +59,8 @@
 .rotate-infinite {
   animation: spinInfinite 6s linear infinite;
 }
+
+.super-bold {
+  font-weight: 900;
+  -webkit-text-stroke: 1px white; /* adds thickness */
+}
