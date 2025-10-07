@@ -3,6 +3,7 @@ import GetSaferBtn from "./ui/GetSaferBtn";
 import image1 from "../assets/ChatGPT Image Oct 1, 2025, 06_35_21 PM 1.png";
 import image2 from "../assets/image 27.png";
 import image3 from "../assets/image 33.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const textContainerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -54,7 +55,10 @@ export default function Hero() {
               className="super-bold leading-[1.1] text-center"
               variants={textItemVariants}
             >
-              <span className="block text-[42px] sm:text-[60px] lg:text-[70px] xl:text-[75px]" style={{fontWeight:"2000"}}>
+              <span
+                className="block text-[42px] sm:text-[60px] lg:text-[70px] xl:text-[75px]"
+                style={{ fontWeight: "2000" }}
+              >
                 Experience Ai
               </span>
               <span className="block text-[28px] sm:text-[40px] lg:text-[50px] xl:text-[55px]">
@@ -87,18 +91,20 @@ export default function Hero() {
             animate="visible"
           >
             <div className="rounded-full md:rounded-[70px] overflow-hidden bg-black">
-              <img
+              <LazyLoadImage
+                height="100%"
+                effect="blur"
                 onLoad={(e) => (e.currentTarget.style.opacity = "1")}
                 loading="eager"
                 src={image2}
                 alt="Top"
-                className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px] lg:h-[250px] object-cover"
+                className="scale-[1.05] w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px] lg:h-[250px] object-cover"
               />
             </div>
           </motion.div>
 
           <motion.div
-            className="absolute top-36 mt-2 sm:mt-0 sm:top-64 translate-y-4 w-[240px] text-xs font-normal bg-white text-black sm:px-4 sm:py-4 px-4 py-3 rounded-[20px] shadow sm:font-semibold"
+            className="absolute top-36 mt-2 sm:mt-0 sm:top-64 translate-y-4 w-[240px] text-xs font-normal bg-white text-black sm:px-4 sm:py-4 px-4 py-3 rounded-[20px] shadow sm:font-semibold z-10"
             variants={infoBoxVariants}
             initial="hidden"
             animate="visible"
@@ -123,12 +129,14 @@ export default function Hero() {
                 animate="visible"
               >
                 <div className="rounded-full md:rounded-[70px] overflow-hidden bg-black">
-                  <img
+                  <LazyLoadImage
+                    height="100%"
+                    effect="blur"
                     onLoad={(e) => (e.currentTarget.style.opacity = "1")}
                     loading="eager"
                     src={img}
                     alt={`Image ${i}`}
-                    className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px] lg:h-[250px] object-cover"
+                    className="scale-[1.05] w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px] lg:h-[250px] object-cover"
                   />
                 </div>
               </motion.div>
