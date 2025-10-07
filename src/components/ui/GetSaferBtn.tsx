@@ -63,7 +63,7 @@ export default function GetSaferBtn() {
         <div
           role="button"
           onClick={() => getDeviceOS() == "Other" && setOpen(!open)}
-          className="bg-white font-Inter transition duration-200 active:scale-[0.94] flex items-center justify-center gap-4 py-3 px-4 font-bold text-xl w-full max-w-[250px] text-black rounded-full cursor-pointer"
+          className="bg-white font-Inter transition duration-200 active:scale-[0.94] flex items-center justify-center gap-4 py-3 px-4 font-bold text-xl w-full max-w-[300px] text-black rounded-full cursor-pointer"
         >
           <span className="text-center">Get Safer</span>
           <FaGooglePlay size={23} />

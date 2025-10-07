@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-black text-white font-Righteous">
-      <div className="py-6 mx-6 sm:mx-8 md:mx-10 lg:mx-16  flex justify-between items-center">
+      <div className="py-6 mx-10 sm:mx-8 md:mx-10 lg:mx-16  flex justify-between items-center">
         <div className="text-white font-bold text-xl z-50 flex justify-center items-center gap-4">
           <Link
             to="/"
@@ -25,7 +25,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="gap-10 justify-around md:flex hidden">
+        <nav className="gap-10 justify-around md:flex hidden font-Inter">
           <Link to="/contact" className="text-md">
             Contact
           </Link>
