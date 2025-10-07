@@ -9,9 +9,9 @@ export default function AboutUs() {
         keywords="SmartSafer, about, mission, vision, team"
       />
 
-      <div className="mx-1 md:mx-10 px-4 sm:px-6 py-16 space-y-2">
+      <div className="mx-1 md:mx-10 px-4 sm:px-6 py-16 space-y-2 font-Inter">
         <div className="text-xl font-semibold">About Us </div>
-        <div className="text-lg">
+        <div className="text-lg font-medium">
           At Safer Technologies Limited, we are redefining the future of
           payments with innovation, intelligence, and trust. Safer is our
           flagship fintech app designed to make payments smarter, faster, and
