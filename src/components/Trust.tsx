@@ -18,7 +18,7 @@ export default function Trust() {
       <div className="block lg:hidden">
         <Swiper
           spaceBetween={16}
-          slidesPerView={1.2} // show a bit of next slide
+          slidesPerView={1.2}
           centeredSlides={false}
           breakpoints={{
             640: { slidesPerView: 1.5, spaceBetween: 20 },
@@ -27,23 +27,19 @@ export default function Trust() {
           }}
         >
           {cards.map((card, index) => (
-            <SwiperSlide
-              key={card.id}
-              style={{ minHeight: "100%", height: "100%" }}
-              className="flex justify-start max-w-[100%] min-h-full h-[2000px]"
-            >
-              <div className="bg-[#080707] text-white lg:py-10 md:py-7 py-5 sm:px-8 px-5 space-y-4 rounded-3xl min-h-full w-full h-[270px] md:min-h-full h-full">
-                <div className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[18px] font-semibold text-left">
-                  {card?.title}
+            <SwiperSlide key={card.id} className="!h-auto">
+              <div className="bg-[#080707] text-white flex flex-col justify-between rounded-3xl w-full h-[320px] p-6 sm:p-8 relative">
+                <div className="text-[18px] sm:text-[20px] md:text-[22px] font-semibold text-left leading-tight">
+                  {card.title}
                 </div>
-                <div className="w-full flex justify-end items-end">
-                  <div className="text-[40px] md:px-6 px-3 left-2 text-white/20 font-semibold absolute bottom-3">
+                <div className="flex justify-end items-end relative">
+                  <div className="absolute bottom-3 left-3 text-[40px] text-white/20 font-semibold">
                     -{index + 1}
                   </div>
                   <img
                     src={card.image}
-                    alt={card.title.replace(/<br\/>/g, " ")}
-                    className="w-[160px] h-[160px]"
+                    alt={card.title}
+                    className="w-[140px] h-[140px] object-contain"
                   />
                 </div>
               </div>
@@ -57,20 +53,20 @@ export default function Trust() {
         {cards.map((card, index) => (
           <div
             key={card.id}
-            className="bg-[#080707] relative text-white py-10 px-8 space-y-4 rounded-3xl h-full w-full"
+            className="bg-[#080707] text-white flex flex-col justify-between rounded-3xl w-full h-[320px] p-8 relative"
           >
             <div
-              className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[25px] font-semibold text-left"
+              className="xl:text-[30px] lg:text-[25px] md:text-[20px] text-[25px] font-semibold text-left leading-tight"
               dangerouslySetInnerHTML={{ __html: card.title }}
             ></div>
-            <div className="w-full flex justify-end items-end">
-              <div className="text-[45px] px-6 text-white/25 font-semibold absolute bottom-5 left-5">
+            <div className="flex justify-end items-end relative">
+              <div className="absolute bottom-5 left-5 text-[45px] text-white/25 font-semibold">
                 -{index + 1}
               </div>
               <img
                 src={card.image}
-                alt={card.title.replace(/<br\/>/g, " ")}
-                className="w-[160px] h-[160px]"
+                alt={card.title}
+                className="w-[160px] h-[160px] object-contain"
               />
             </div>
           </div>
