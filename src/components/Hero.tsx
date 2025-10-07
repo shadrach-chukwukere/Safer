@@ -92,7 +92,7 @@ export default function Hero() {
                 loading="eager"
                 src={image2}
                 alt="Top"
-                className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px]   object-cover"
+                className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[170px] md:h-[170px] lg:w-[250px] lg:h-[250px] object-cover"
               />
             </div>
           </motion.div>
