@@ -91,7 +91,7 @@ export default function JoinSafer() {
           <LazyLoadImage
             src={image1}
             alt="Virtual card preview"
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md object-contain"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md object-contain min-h-[280px]"
             effect="blur"
           />
         </motion.div>

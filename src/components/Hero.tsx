@@ -113,7 +113,7 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <div className="flex justify-center gap-6 sm:gap-12 mt-6">
+          <div className="flex justify-center gap-6 sm:gap-12 mt-5">
             {[image3, image1].map((img, i) => (
               <motion.div
                 key={i}
