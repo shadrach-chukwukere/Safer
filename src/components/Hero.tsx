@@ -63,7 +63,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-sm sm:text-md md:text-[22px] font-semibold max-w-lg mx-auto md:mx-0 text-center leading-8"
+              className="text-sm sm:text-md md:text-[22px] font-semibold max-w-lg mx-auto md:mx-0 text-center leading-[1.5]"
               variants={textItemVariants}
             >
               Receive, send, convert, send funds locally, create and make
