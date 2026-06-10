@@ -42,18 +42,54 @@ export default function Footer() {
                   <Link to="/about">About us</Link>
                 </div>
                 <div>
-                  <Link to="contact">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </div>
               
               </div>
 
               <div className="space-y-3">
-                <div className="font-bold text-base">Social</div>
-                <div>Instagram</div>
-                <div>Linkedin</div>
-                <div>Tiktok</div>
-                <div>X (Twitter)</div>
-              </div>
+  <div className="font-bold text-base">Social</div>
+
+  <div>
+    <a
+      href="https://www.instagram.com/teamsaference?igsh=MXY5Zzl6M2hhanZmbg%3D%3D&utm_source=qr"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram
+    </a>
+  </div>
+
+  <div>
+    <a
+      href="https://www.tiktok.com/@teamsaference?_r=1&_t=ZS-975dQ61xxuX"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TikTok
+    </a>
+  </div>
+
+  <div>
+    <a
+      href="https://x.com/teamsaference?s=11"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      X (Twitter)
+    </a>
+  </div>
+
+  <div>
+    <a
+      href="https://www.linkedin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+  </div>
+</div>
             </div>
           </div>
           <div className="flex justify-center items-center text-sm text-base text-center pt-12">
