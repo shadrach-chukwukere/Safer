@@ -44,7 +44,7 @@ export default function Footer() {
                 <div>
                   <Link to="contact">Contact</Link>
                 </div>
-                <div>Community guidelines</div>
+              
               </div>
 
               <div className="space-y-3">
