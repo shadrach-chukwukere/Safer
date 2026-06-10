@@ -6,6 +6,7 @@ import AboutUs from "./Pages/AboutUs";
 import Privacy from "./Pages/Privacy";
 import Terms from "./Pages/Terms";
 
+
 export default function App() {
   return (
     <Routes>
